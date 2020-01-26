@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6b8e10a830670458b8482a755ee3be, type: 3}
+  m_Name: Granary
+  m_EditorClassIdentifier: 
+  npcTalking: {fileID: 11400000, guid: 88399df9d1580d94e9b2cc5fd8883030, type: 2}
+  sentences:
+  - We wish to construct a new granary in the city. We would need some funds to do
+    so.
+  dialogueChoices:
+  - choice: Yes
+    moneyChange: -100
+    response: Thank you. We will start building immediately!
+  - choice: No
+    moneyChange: 0
+    response: Oh. Well the city needs it. But I guess we can't afford it right now.
+  - choice: 
+    moneyChange: 0
+    response: 
+  - choice: 
+    moneyChange: 0
+    response: 
