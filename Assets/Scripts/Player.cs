@@ -71,4 +71,16 @@ public class Player : MonoBehaviour
     {
         return gold;
     }
+
+    public void ChangeHappiness(int change)
+    {
+        happiness += change;
+        happinessText.text = happiness.ToString();
+    }
+
+    public void ChangePopulation(int change)
+    {
+        population += change;
+        populationText.text = population.ToString();
+    }
 }

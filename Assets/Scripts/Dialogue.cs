@@ -20,6 +20,9 @@ public class DialogueChoice
 
     //effects
     public int moneyChange;
+    public int populationChange;
+    public int happinessChange;
+
     [TextArea(2, 4)]
     public string response;
 }

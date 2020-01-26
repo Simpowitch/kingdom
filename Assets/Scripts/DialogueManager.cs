@@ -166,6 +166,9 @@ public class DialogueManager : MonoBehaviour
 
         //Perform choice actions
         Player.instance.ChangeGold(choice.moneyChange);
+        Player.instance.ChangeHappiness(choice.happinessChange);
+        Player.instance.ChangePopulation(choice.populationChange);
+
 
         //End dialogue button enable
         activeDialogue = null;
