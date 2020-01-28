@@ -37,50 +37,80 @@ public class Player : MonoBehaviour
 
 
     int gold;
-    int happiness;
     int population;
+    int happiness;
+    int armyPower;
+    int navalPower;
 
 
     [SerializeField] int startGold = 100;
-    [SerializeField] int startHappiness = 100;
     [SerializeField] int startPopulation = 100;
+    [SerializeField] int startHappiness = 100;
+    [SerializeField] int startArmy = 100;
+    [SerializeField] int startNaval = 100;
+
 
 
     [SerializeField] TextMeshProUGUI goldText = null;
-    [SerializeField] TextMeshProUGUI happinessText = null;
     [SerializeField] TextMeshProUGUI populationText = null;
+    [SerializeField] TextMeshProUGUI happinessText = null;
+    [SerializeField] TextMeshProUGUI armyText = null;
+    [SerializeField] TextMeshProUGUI navalText = null;
+
 
     private void Start()
     {
         gold = startGold;
-        happiness = startHappiness;
         population = startPopulation;
+        happiness = startHappiness;
+        armyPower = startArmy;
+        navalPower = startNaval;
 
         goldText.text = gold.ToString();
-        happinessText.text = happiness.ToString();
         populationText.text = population.ToString();
+        happinessText.text = happiness.ToString();
+        armyText.text = armyPower.ToString();
+        navalText.text = navalPower.ToString();
     }
 
-    public void ChangeGold(int change)
-    {
-        gold += change;
-        goldText.text = gold.ToString();
-    }
 
     public int CheckGold()
     {
         return gold;
     }
 
-    public void ChangeHappiness(int change)
+    public void ChangeStat(StatChange statChange)
     {
-        happiness += change;
-        happinessText.text = happiness.ToString();
+        switch (statChange.stat)
+        {
+            case Stat.Money:
+                gold += statChange.change;
+                goldText.text = gold.ToString();
+                break;
+            case Stat.Population:
+                population += statChange.change;
+                populationText.text = population.ToString();
+                break;
+            case Stat.Happiness:
+                happiness += statChange.change;
+                happinessText.text = happiness.ToString();
+                break;
+            case Stat.Army:
+                armyPower += statChange.change;
+                armyText.text = armyPower.ToString();
+                break;
+            case Stat.Naval:
+                navalPower += statChange.change;
+                navalText.text = navalPower.ToString();
+                break;
+        }
     }
 
-    public void ChangePopulation(int change)
+    public void ChangeStat(StatChange[] statChange)
     {
-        population += change;
-        populationText.text = population.ToString();
+        for (int i = 0; i < statChange.Length; i++)
+        {
+            ChangeStat(statChange[i]);
+        }
     }
 }

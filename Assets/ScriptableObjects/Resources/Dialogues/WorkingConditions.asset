@@ -10,32 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f6b8e10a830670458b8482a755ee3be, type: 3}
-  m_Name: New Dialogue
+  m_Name: WorkingConditions
   m_EditorClassIdentifier: 
-  npcTalking: {fileID: 0}
-  sentences: []
+  npcTalking: {fileID: 11400000, guid: 89ba08a82cc91054b89689a2bc442650, type: 2}
+  sentences:
+  - The citizens are complaining about dangerous working conditions in our mines.
+    Should we do something about these complaints?
   dialogueChoices:
-  - choice: 
-    moneyChange: 0
-    populationChange: 0
-    happinessChange: 0
+  - choice: Strenghten the support beams
+    changes:
+    - stat: 0
+      change: -50
     followUpDialogue: {fileID: 0}
-    response: 
-  - choice: 
-    moneyChange: 0
-    populationChange: 0
-    happinessChange: 0
+    response: Very well. We will strenghten those beams alright. This might also
+      save some lives in the future.
+  - choice: Do nothing
+    changes:
+    - stat: 2
+      change: -10
     followUpDialogue: {fileID: 0}
-    response: 
-  - choice: 
-    moneyChange: 0
-    populationChange: 0
-    happinessChange: 0
+    response: Of course. We cannot listen to every demand of each citizen.
+  - choice: Throw those who complain in the dungeons
+    changes:
+    - stat: 1
+      change: -10
     followUpDialogue: {fileID: 0}
-    response: 
+    response: Your will is my command.
   - choice: 
-    moneyChange: 0
-    populationChange: 0
-    happinessChange: 0
+    changes: []
     followUpDialogue: {fileID: 0}
     response: 

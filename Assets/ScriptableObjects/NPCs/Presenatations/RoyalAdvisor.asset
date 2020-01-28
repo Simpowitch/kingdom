@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f6b8e10a830670458b8482a755ee3be, type: 3}
-  m_Name: Legolas
+  m_Name: RoyalAdvisor
   m_EditorClassIdentifier: 
   npcTalking: {fileID: 11400000, guid: 89ba08a82cc91054b89689a2bc442650, type: 2}
   sentences:
@@ -22,13 +22,25 @@ MonoBehaviour:
   dialogueChoices:
   - choice: 
     moneyChange: 0
+    populationChange: 0
+    happinessChange: 0
+    followUpDialogue: {fileID: 0}
     response: 
   - choice: 
     moneyChange: 0
+    populationChange: 0
+    happinessChange: 0
+    followUpDialogue: {fileID: 0}
     response: 
   - choice: 
     moneyChange: 0
+    populationChange: 0
+    happinessChange: 0
+    followUpDialogue: {fileID: 0}
     response: 
   - choice: 
     moneyChange: 0
+    populationChange: 0
+    happinessChange: 0
+    followUpDialogue: {fileID: 0}
     response: 

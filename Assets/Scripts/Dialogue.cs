@@ -19,12 +19,18 @@ public class DialogueChoice
     public string choice;
 
     //effects
-    public int moneyChange;
-    public int populationChange;
-    public int happinessChange;
+    public StatChange[] changes;
 
     public Dialogue followUpDialogue;
 
     [TextArea(2, 4)]
     public string response;
+}
+
+public enum Stat { Money, Population, Happiness, Army, Naval}
+[System.Serializable]
+public struct StatChange
+{
+    public Stat stat;
+    public int change;
 }

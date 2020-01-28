@@ -138,7 +138,17 @@ public class DialogueManager : MonoBehaviour
                 break;
             }
             choiceButtons[i].gameObject.SetActive(true);
-            choiceButtons[i].interactable = !(activeDialogue.dialogueChoices[i].moneyChange < 0 && Mathf.Abs(activeDialogue.dialogueChoices[i].moneyChange) > Player.instance.CheckGold());
+
+            choiceButtons[i].interactable = true;
+
+            //If change is money and we can't afford the choice, make the button non interactable
+            foreach (StatChange statChange in activeDialogue.dialogueChoices[i].changes)
+            {
+                if (statChange.stat == Stat.Money && statChange.change < 0 && Mathf.Abs(statChange.change) > Player.instance.CheckGold())
+                {
+                    choiceButtons[i].interactable = false;
+                }
+            }
             choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = activeDialogue.dialogueChoices[i].choice;
         }
     }
@@ -165,9 +175,7 @@ public class DialogueManager : MonoBehaviour
         HideChoiceButtons();
 
         //Perform choice actions
-        Player.instance.ChangeGold(choice.moneyChange);
-        Player.instance.ChangeHappiness(choice.happinessChange);
-        Player.instance.ChangePopulation(choice.populationChange);
+        Player.instance.ChangeStat(choice.changes);
         if (choice.followUpDialogue)
         {
             GameManager.instance.AddUpcomingDialogue(choice.followUpDialogue);

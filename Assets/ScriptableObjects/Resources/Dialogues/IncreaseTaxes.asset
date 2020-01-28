@@ -12,30 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6b8e10a830670458b8482a755ee3be, type: 3}
   m_Name: IncreaseTaxes
   m_EditorClassIdentifier: 
-  npcTalking: {fileID: 0}
-  sentences: []
+  npcTalking: {fileID: 11400000, guid: 89ba08a82cc91054b89689a2bc442650, type: 2}
+  sentences:
+  - To further develop this empire the treasury should always be filled.
+  - Do you wish to increase the taxes of the citizens to improve our monetary situation?
   dialogueChoices:
-  - choice: 
-    moneyChange: 0
-    populationChange: 0
-    happinessChange: 0
+  - choice: Raise the taxes substantially
+    changes:
+    - stat: 0
+      change: 200
+    - stat: 2
+      change: -30
     followUpDialogue: {fileID: 0}
-    response: 
-  - choice: 
-    moneyChange: 0
-    populationChange: 0
-    happinessChange: 0
+    response: Very well. It shall be done. The crowns will increase our possibilities.
+  - choice: Raise the taxes moderately
+    changes:
+    - stat: 0
+      change: 100
+    - stat: 2
+      change: -15
     followUpDialogue: {fileID: 0}
-    response: 
-  - choice: 
-    moneyChange: 0
-    populationChange: 0
-    happinessChange: 0
+    response: We shall raise the taxes modestly.
+  - choice: Raise the taxes lightly
+    changes:
+    - stat: 0
+      change: 50
+    - stat: 2
+      change: -5
     followUpDialogue: {fileID: 0}
-    response: 
-  - choice: 
-    moneyChange: 0
-    populationChange: 0
-    happinessChange: 0
+    response: Very well. The citizens shall hardly notice the increase.
+  - choice: Don't raise the taxes
+    changes: []
     followUpDialogue: {fileID: 0}
-    response: 
+    response: A wise move. Let us not disturb the populace opinion of the crown.
