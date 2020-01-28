@@ -25,8 +25,8 @@ public class Player : MonoBehaviour
     [SerializeField] Gender gender = Gender.Other;
     string[][] names = new string[3][]
     {
-        new string[] {"My king.", "Your highness.", "Your excellency."},
-        new string[] {"My queen.", "Your highness.", "Your excellency."},
+        new string[] {"My king.", "Your highness.", "Your excellency.", "Sire.", "My lord."},
+        new string[] {"My queen.", "Your highness.", "Your excellency.", "My lady."},
         new string[] {"My ruler.", "Your highness.", "Your excellency."}
     };
 

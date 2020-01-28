@@ -62,4 +62,14 @@ public class GameManager : MonoBehaviour
             DialogueManager.instance.StartDialogue(dialogue);
         }
     }
+
+    public void AddUpcomingDialogue(Dialogue dialogue)
+    {
+        upcomingDialogues.Insert(Random.Range(0, upcomingDialogues.Count - 1), dialogue);
+    }
+
+    public void AddUpcomingDialogueAtStart(Dialogue dialogue)
+    {
+        upcomingDialogues.Insert(0, dialogue);
+    }
 }

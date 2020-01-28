@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI npcNameText = null;
     [SerializeField] TextMeshProUGUI dialogueText = null;
 
-    [SerializeField] Button continueButton;
+    [SerializeField] Button continueButton = null;
     [SerializeField] GameObject choiceBox = null;
     [SerializeField] Button[] choiceButtons = new Button[4];
 
@@ -168,7 +168,10 @@ public class DialogueManager : MonoBehaviour
         Player.instance.ChangeGold(choice.moneyChange);
         Player.instance.ChangeHappiness(choice.happinessChange);
         Player.instance.ChangePopulation(choice.populationChange);
-
+        if (choice.followUpDialogue)
+        {
+            GameManager.instance.AddUpcomingDialogue(choice.followUpDialogue);
+        }
 
         //End dialogue button enable
         activeDialogue = null;

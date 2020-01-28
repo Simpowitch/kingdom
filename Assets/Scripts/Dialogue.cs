@@ -23,6 +23,8 @@ public class DialogueChoice
     public int populationChange;
     public int happinessChange;
 
+    public Dialogue followUpDialogue;
+
     [TextArea(2, 4)]
     public string response;
 }
