@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6b8e10a830670458b8482a755ee3be, type: 3}
+  m_Name: Pirates2Fail
+  m_EditorClassIdentifier: 
+  npcTalking: {fileID: 11400000, guid: ee24949be26d40844a144baf5ab48ca5, type: 2}
+  sentences:
+  - Those pesky pirates continue to pillage and plunder. Our current efforts don't
+    seem enough to keep them at bay.
+  - What should we do?
+  dialogueChoices:
+  - choice: Send a large force and deal with them directly
+    changes:
+    - stat: 4
+      change: -50
+    followUpDialogue: {fileID: 11400000, guid: 1d19996533edc774b8456e5b1484fadf, type: 2}
+    response: Yes. I was hoping you would say that. We shall strike them with everything
+      we have!
+  - choice: Bargain with their leader
+    changes:
+    - stat: 0
+      change: -350
+    - stat: 2
+      change: 10
+    followUpDialogue: {fileID: 0}
+    response: We will try to make a deal to keep them away from our domains.
+  - choice: Try to employ them
+    changes:
+    - stat: 0
+      change: -500
+    - stat: 4
+      change: 50
+    followUpDialogue: {fileID: 0}
+    response: Highly un-conventional I must say, but we shall try to make them join
+      our ranks.
+  - choice: 
+    changes: []
+    followUpDialogue: {fileID: 0}
+    response: 

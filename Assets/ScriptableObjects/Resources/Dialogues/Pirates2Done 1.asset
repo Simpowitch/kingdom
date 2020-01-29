@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6b8e10a830670458b8482a755ee3be, type: 3}
+  m_Name: Pirates2Done 1
+  m_EditorClassIdentifier: 
+  npcTalking: {fileID: 11400000, guid: ee24949be26d40844a144baf5ab48ca5, type: 2}
+  sentences:
+  - 'Our fleet has returned. We brought down the sea-criminals! They should be punished
+    for their injustice. '
+  - We retrieved gold that they have stolen, but what punishment would you see fit
+    for them?
+  dialogueChoices:
+  - choice: Make everyone leave their work to attend a public hanging!
+    changes:
+    - stat: 0
+      change: 100
+    - stat: 4
+      change: 50
+    - stat: 2
+      change: 10
+    followUpDialogue: {fileID: 0}
+    response: Very well, the old fashined way is probably the most fitting.
+  - choice: Banish them from our lands!
+    changes:
+    - stat: 0
+      change: 200
+    - stat: 4
+      change: 50
+    followUpDialogue: {fileID: 0}
+    response: It shall be done, they will walk their way out of our lands and be
+      forbidden to return
+  - choice: Throw them in the dungeons!
+    changes:
+    - stat: 0
+      change: 200
+    - stat: 4
+      change: 50
+    followUpDialogue: {fileID: 0}
+    response: Excellent. They will rot there and have to endure the time to take
+      it's toll on their souls and bodies. In time they might learn right from wrong.
+  - choice: 
+    changes: []
+    followUpDialogue: {fileID: 0}
+    response: 
