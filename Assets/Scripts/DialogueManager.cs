@@ -36,15 +36,26 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("Starting conversation with: " + dialogue.npcTalking.npcName);
 
+        //Clear any leftover sentences
+        sentences.Clear();
+
         //Save the started dialogue
         activeDialogue = dialogue;
 
-        //Clear any leftover sentences
-        sentences.Clear();
 
         //Buttons
         continueButton.interactable = true;
         HideChoiceButtons();
+
+        //if havent done presentation, do that first
+        if (!dialogue.npcTalking.hasDonePresentation && dialogue.npcTalking.presentation.Length > 0)
+        {
+            foreach (string sentence in dialogue.npcTalking.presentation)
+            {
+                sentences.Enqueue(sentence);
+            }
+            dialogue.npcTalking.hasDonePresentation = true;
+        }
 
         //Save the sentences
         foreach (string sentence in dialogue.sentences)

@@ -52,15 +52,7 @@ public class GameManager : MonoBehaviour
 
     private void StartDialogue(Dialogue dialogue)
     {
-        if (dialogue.npcTalking.presentation != null && !dialogue.npcTalking.hasDonePresentation)
-        {
-            dialogue.npcTalking.hasDonePresentation = true;
-            DialogueManager.instance.StartDialogue(dialogue.npcTalking.presentation);
-        }
-        else
-        {
-            DialogueManager.instance.StartDialogue(dialogue);
-        }
+        DialogueManager.instance.StartDialogue(dialogue);
     }
 
     public void AddUpcomingDialogue(Dialogue dialogue)

@@ -7,5 +7,6 @@ public class NPC : ScriptableObject
 {
     public string npcName;
     public bool hasDonePresentation = false;
-    public Dialogue presentation;
+    [TextArea(3, 3)]
+    public string[] presentation;
 }
