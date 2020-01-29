@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6b8e10a830670458b8482a755ee3be, type: 3}
   m_Name: Pirates
   m_EditorClassIdentifier: 
-  npcTalking: {fileID: 0}
-  sentences: []
+  npcTalking: {fileID: 11400000, guid: ee24949be26d40844a144baf5ab48ca5, type: 2}
+  sentences:
+  - There has been rumours about pirates plundering smaller vessels  in waters under
+    our control. Should we send a group of ship's to investigate these areas?
   dialogueChoices:
-  - choice: 
+  - choice: Send as many as we can spare
     changes: []
     followUpDialogue: {fileID: 0}
     response: 
-  - choice: 
+  - choice: Send a smaller group of our fleet
     changes: []
     followUpDialogue: {fileID: 0}
     response: 
