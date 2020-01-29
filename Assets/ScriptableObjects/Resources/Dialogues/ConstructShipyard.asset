@@ -12,18 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6b8e10a830670458b8482a755ee3be, type: 3}
   m_Name: ConstructShipyard
   m_EditorClassIdentifier: 
-  npcTalking: {fileID: 0}
-  sentences: []
+  npcTalking: {fileID: 11400000, guid: ee24949be26d40844a144baf5ab48ca5, type: 2}
+  sentences:
+  - To increase our possibilities of governing the harbors and the coast we might
+    need to think about expaning our ship building capacity.
+  - This could be done by building a whole new shipyard, which would be costly, or
+    take over and renovate one existing owned by our civilian fishermen.
   dialogueChoices:
-  - choice: 
-    changes: []
+  - choice: Build a new shipyard
+    changes:
+    - stat: 4
+      change: 50
+    - stat: 0
+      change: -300
     followUpDialogue: {fileID: 0}
-    response: 
-  - choice: 
-    changes: []
+    response: If you say so, it shall be done.
+  - choice: Renovate an existing private shipyard
+    changes:
+    - stat: 0
+      change: -150
+    - stat: 2
+      change: -20
+    - stat: 4
+      change: 50
     followUpDialogue: {fileID: 0}
-    response: 
-  - choice: 
+    response: We will take it from them, in the name of the empire. Excellent choice
+      to spare the treasury.
+  - choice: Do not do anything right now
     changes: []
     followUpDialogue: {fileID: 0}
     response: 

@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e12608ee7a25b94d8be8a5df433b9db, type: 3}
-  m_Name: Scientist
+  m_Name: ArmyGeneral
   m_EditorClassIdentifier: 
-  npcName: 
+  npcName: Ida, the Conqueror
   hasDonePresentation: 0
-  presentation: {fileID: 0}
+  presentation:
+  - I am your loyal millitary strategist Ida. I will maintain your forces in good
+    condition and make sure every spear and shield is ready at your command.

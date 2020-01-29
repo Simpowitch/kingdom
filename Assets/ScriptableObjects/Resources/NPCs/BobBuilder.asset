@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Bob
   hasDonePresentation: 0
-  presentation: {fileID: 0}
+  presentation:
+  - Name's Bob, I build stuff. I plan. Make sure others build too. Things I build
+    never breaks. If they do I fix.

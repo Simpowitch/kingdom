@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e12608ee7a25b94d8be8a5df433b9db, type: 3}
-  m_Name: RoyalAdvisor
+  m_Name: Farmer
   m_EditorClassIdentifier: 
-  npcName: Legolas
-  hasDonePresentation: 1
-  presentation: {fileID: 11400000, guid: f888ec4e477b4f544a55274f59e71e7f, type: 2}
+  npcName: Argo Summervale
+  hasDonePresentation: 0
+  presentation: []

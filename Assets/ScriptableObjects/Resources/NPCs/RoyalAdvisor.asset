@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e12608ee7a25b94d8be8a5df433b9db, type: 3}
+  m_Name: RoyalAdvisor
+  m_EditorClassIdentifier: 
+  npcName: Slythe Silvertongue
+  hasDonePresentation: 0
+  presentation:
+  - I am Slythe. I am your humble royal advisor. I will arrange meetings with citizens
+    who has petitions that needs your personal attention and decision.
+  - I also oversee the financial side of the court, being the master of coins and
+    treasury.
+  - With your ruling this land can grow and prosper. Make sure the treasury doesn't
+    go empty, keep your citizens happy and the world will be yours.

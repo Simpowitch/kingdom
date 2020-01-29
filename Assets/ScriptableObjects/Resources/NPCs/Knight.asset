@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e12608ee7a25b94d8be8a5df433b9db, type: 3}
-  m_Name: General
+  m_Name: Knight
   m_EditorClassIdentifier: 
-  npcName: 
+  npcName: Sir Rob Styrke, the brave
   hasDonePresentation: 0
-  presentation: {fileID: 0}
+  presentation:
+  - My name is Rob, I am the son of Sir William Styrke. Sworn to protect your highness
+    and all of thy glory!

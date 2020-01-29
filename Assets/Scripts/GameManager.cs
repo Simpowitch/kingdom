@@ -27,6 +27,17 @@ public class GameManager : MonoBehaviour
     {
         allDialogues = Resources.LoadAll<Dialogue>("Dialogues");
 
+        StartNewGame();
+    }
+
+    private void StartNewGame()
+    {
+        NPC[] nPCs = Resources.LoadAll<NPC>("NPCs");
+        foreach (NPC npc in nPCs)
+        {
+            npc.hasDonePresentation = false;
+        }
+
         InitiateNextDialogue();
     }
 
